@@ -1,6 +1,8 @@
 $(function () {
   console.log('document is ready');
 
+  var totalSal = 0;
+
   $('form').on('submit', function (event) {
     console.log('form submitted');
 
@@ -15,19 +17,48 @@ $(function () {
 
     appendDom(formData);
 
+    totalSal += parseFloat(formData.annualSalary);
+    appendMonthSal(totalSal);
+
     clearForm();
   });
 });
 
+
+
 function appendDom(emp) {
   var $emp = $('<div class="employee"></div>'); // create a div jQuery object
+  var $ul= $('<ul></ul>');
+  var $fName=$('<li>' + emp.employeeFirstName + '</li>' );
+  var $lName=$('<li>' + emp.employeeLastName + '</li>' );
+  var $id=$('<li>' + emp.employeeIdNumber + '</li>' );
+  var $salary=$('<li>' + emp.annualSalary + '</li>' );
+  var $job=$('<li>' + emp.jobTitle + '</li>' );
 
-  $emp.append('<p>' + emp.employeeFirstName + ' ' + emp.employeeLastName + '</p>'); // add our employee data
-  $emp.append('<p>' + emp.employeeIdNumber + '</p>');
+
+  $ul.append($fName);
+  $ul.append($lName);
+  $ul.append($id);
+  $ul.append($salary);
+  $ul.append($job);
+  $emp.append($ul);
+
+  // $emp.append('<li>' + emp.employeeFirstName + '</li>'); // add our employee data
+  // $emp.append('<li>' + emp.employeeLastName + '</li>');
+  // $emp.append('<li>' + emp.employeeIdNumber + '</li>');
+  // $emp.append('<li>' + emp.annualSalary + '</li>');
+  // $emp.append('<li>' + emp.jobTitle + '</li>');
 
   $('#employees').append($emp); // append our div to the DOM
-}
+};
+
+//appending monthly salary in Dom
+function appendMonthSal(salEmp){
+    $('#expend').text("Monthly Salary Expenditure: $" + ( parseFloat(salEmp)/12).toFixed(2));
+};
+
 
 function clearForm() {
   $('form').find('input[type=text]').val('');
-}
+  $('form').find('input[type=number]').val('');
+};

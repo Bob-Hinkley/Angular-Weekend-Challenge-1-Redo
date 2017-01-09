@@ -8,21 +8,43 @@
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
     <script src="app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="stylesheet.css">
     </head>
+
   <body>
+    <div id="form">
     <form>
       <label for="employeeFirstName">First Name</label>
       <input type="text" id="employeeFirstName" name="employeeFirstName" />
       <label for="employeeLastName">Last Name</label>
       <input type="text" id="employeeLastName" name="employeeLastName" />
       <label for="employeeIdNumber">ID Number</label>
-      <input type="text" name="employeeIdNumber" />
+      <input type="number" name="employeeIdNumber" />
+      <label for="annualSalary">Annual Salart</label>
+      <input type="number" id="annualSalary" name="annualSalary" />
+      <label for="jobTitle">Job Title</label>
+      <input type="text" id="jobTitle" name="jobTitle" />
       <input type="submit" value="Submit" />
     </form>
+    </div>
 
     <div id="employees">
-      <h2>Employees</h2>
+      <h2>Employees:</h2>
+        <ul>
+          <div class="underline">
+          <li>First Name</li>
+          <li>Last Name</li>
+          <li>Employee Number</li>
+          <li>Annual Salary</li>
+          <li>Job Title</li>
+          </div>
+        </ul>
+
       <!-- to be added via JavaScript -->
+    </div>
+    <div id="expend">
+      <!-- monlily expendetures -->
+
     </div>
   </body>
 </html>

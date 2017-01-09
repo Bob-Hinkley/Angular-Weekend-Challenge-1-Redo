@@ -1,0 +1,52 @@
+
+
+body{
+  padding: 20px;
+}
+
+#form {
+  width: 800px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#expend {
+  padding: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.employee {
+  padding: 10px;
+  margin: 0px;
+}
+
+#employees {
+  margin: auto;
+  text-align: center;
+
+}
+
+/*ul li {
+  display: inline-block;
+}*/
+
+li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 15px;
+  width: 200px;
+}
