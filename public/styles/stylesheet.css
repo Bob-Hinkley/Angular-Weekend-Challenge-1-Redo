@@ -25,9 +25,7 @@ input {
   font-weight: bold;
 }
 
-.underline {
-  text-decoration: underline;
-}
+
 
 
 .employee {
@@ -36,8 +34,8 @@ input {
 }
 
 #employees {
-  margin: auto;
-  text-align: center;
+
+  text-align: left;
 
 }
 
@@ -47,7 +45,7 @@ input {
 
 li {
   display: inline-block;
-  text-align: center;
+  text-align: left;
   margin-left: 15px;
-  width: 200px;
+  /*width: 200px;*/
 }

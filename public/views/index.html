@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Weekend 1</title>
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="scripts/app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="styles/stylesheet.css">
+</head>
+
+<body ng-app="salaryCalc" ng-controller="CalcController as calc">
+
+  <div id="form">
+    <form>
+      <label for="employeeFirstName">First Name</label>
+      <input type="text" ng-model="calc.employee.firstName" name="employeeFirstName" />
+
+      <label for="employeeLastName">Last Name</label>
+      <input type="text" ng-model="calc.employee.lastName" name="employeeLastName" />
+
+      <label for="employeeIdNumber">ID Number</label>
+      <input type="number" ng-model="calc.employee.id"  name="employeeIdNumber" />
+
+      <label for="annualSalary">Annual Salart</label>
+      <input type="number" ng-model="calc.employee.salary" name="annualSalary" />
+
+      <label for="jobTitle">Job Title</label>
+      <input type="text" ng-model="calc.employee.title" name="jobTitle" />
+
+      <input type="submit" ng-click="calc.addEmployee(calc.employee.firstName,
+      calc.employee.lastName, calc.employee.id, calc.employee.salary,
+      calc.employee.title)" value="Submit" />
+    </form>
+  </div>
+  <div id="employees">
+    <h2>Employees:</h2>
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Employee Number</th>
+        <th>Annual Salary</th>
+        <th>Job Title</th>
+      </tr>
+    </div>
+    <tr>
+      <td ng-repeat="employee in calc.employee">{{employee}}<button ng-click="calc.delEmployee($index)">x</button></td>
+    </tr>
+  </table>
+</br>
+<p>Monthly Salary Expenditure: {{calc.totalSal}}</p>
+</body>
+</html>

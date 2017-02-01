@@ -1,0 +1,25 @@
+{
+  "name": "weekend1_angular",
+  "version": "1.0.0",
+  "description": "If you want, you can start your project by forking and cloning this repo.",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bob-Hinkley/upsilon-weekend-1-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bob-Hinkley/upsilon-weekend-1-starter/issues"
+  },
+  "homepage": "https://github.com/Bob-Hinkley/upsilon-weekend-1-starter#readme"
+}
